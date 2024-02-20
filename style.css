@@ -1,0 +1,200 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Base styles for the page */
+html {
+  font-size: 100%;
+  color: #f9ffbf;
+  background-image: url(/img/5.jpg);
+  background-size: cover;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#defs {
+  display: none;
+}
+
+/* Button styles */
+.button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #ed7116;
+  transition: background-color 150ms linear, color 150ms linear;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e4ce8d;
+  color: #222023;
+}
+
+/* Icon styles */
+.icon {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  pointer-events: none;
+  padding: 0.25em;
+}
+/* Edit todo button styles */
+.todo-edit {
+  background-color: #3498db; /* Edit button color */
+}
+
+/* Header styles */
+.header {
+  padding: 2rem 1rem 0.5rem;
+  text-align: center;
+}
+
+/* Main content styles */
+.main {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 65ch;
+  max-width: 100%;
+}
+
+/* Todo form styles */
+.todo-form {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.25em;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  outline: 2px solid #472a05;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+/* Todo input styles */
+.todo-input {
+  background-color: transparent;
+  border: 0;
+  outline: 2px solid transparent;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: inherit;
+  height: 1.5em;
+  transition: outline 150ms linear;
+  color: #fffefc;
+}
+
+.todo-input:hover,
+.todo-input:focus {
+  outline-color: #99caeb;
+  outline-style: groove;
+}
+
+/* Filter styles */
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2em;
+  font-size: inherit;
+}
+
+/* Radio button styles */
+.radio-option {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.radio-label {
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.7em;
+  box-shadow: inset 0 -0.25em #d8a880;
+  opacity: 0.4;
+  transition: all 150ms linear;
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="radio"]:hover + .radio-label,
+input[type="radio"]:focus + .radio-label,
+input[type="radio"]:checked + .radio-label {
+  opacity: 1;
+}
+
+/* Todo item styles */
+.todo-item {
+  font-size: inherit;
+  display: grid;
+  grid-template-columns: 1fr min-content min-content;
+  gap: 0.5em;
+  align-items: center;
+  margin-bottom: 1em;
+  transition: all 200ms ease;
+  transform: translateY(0);
+  transform-origin: bottom left;
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: transparent;
+  outline: 2px solid #472a05;
+ 
+}
+
+/* Todo content styles */
+.todo-content {
+  background-color: transparent;
+  line-height: calc(1.5em - 0.5em);
+  padding: 0.25em 1em;
+  flex: 1;
+  transition: text-decoration 150ms linear, opacity 150ms linear;
+  color: #f3f3f3;
+}
+
+/* Completed todo styles */
+.todo-completed {
+  background-color: #2ecc40;
+}
+
+/* Edit todo button styles */
+.todo-edit {
+  background-color: #3498db; /* Edit button color */
+}
+
+/* Delete todo button styles */
+.todo-delete {
+  background-color: #b8100a;
+}
+
+/* Animation styles for deletion */
+.rotate-fade {
+  transform: rotate(30deg) translateY(2em);
+  opacity: 0;
+}
+
+/* Completed todo content styles */
+.completed .todo-content {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
